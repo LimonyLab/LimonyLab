@@ -1,61 +1,158 @@
 body, html {
-    margin: 0;
-    padding: 0;
     height: 100%;
-    font-family: Arial, sans-serif;
-    background-color: #f5f5f5; /* Light gray background to contrast the buttons */
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-image: 
+        linear-gradient(rgba(255,255,255,0.8), rgba(255,255,255,0.8)),
+        url('data:image/svg+xml;charset=utf8,%3Csvg%20viewBox%3D%220%200%20512%20512%22%20width%3D%22512%22%20height%3D%22512%22%20version%3D%221.1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%20%3Cfilter%20id%3D%22noise%22%3E%20%3CfeTurbulence%20type%3D%22fractalNoise%22%20baseFrequency%3D%220.875%22%20result%3D%22noise%22%20%2F%3E%20%3CfeColorMatrix%20type%3D%22matrix%22%20values%3D%220.9375%200%200%200%200%200%200.69921875%200%200%200%200%200%200.99609375%200%200%200%200%200%200.33984375%200%22%20%2F%3E%20%3C%2Ffilter%3E%20%3Crect%20filter%3D%22url%28%23noise%29%22%20x%3D%220%22%20y%3D%220%22%20width%3D%22512%22%20height%3D%22512%22%20fill%3D%22transparent%22%20opacity%3D%221%22%20%2F%3E%3C%2Fsvg%3E'),
+        radial-gradient(104% 68% at 100% 70%, #78FFE7 0%, #6798E0 67%, #745ABF 100%);
+    background-size: cover, 512px, auto;
+    background-position: center, center, 0% 0%;
+    background-repeat: no-repeat, repeat, repeat;
+    color: #333;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
 }
+
 
 .container {
+    height: auto;
+}
+
+.full-height {
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
-    align-items: center;
     justify-content: center;
-    height: 100%;
+    align-items: center;
+    padding: 40px;
+    text-align: center;
 }
 
-.main-link {
+.logo {
+    width: 450px;
+    height: auto;
+    margin-bottom: 40px;
+    filter: drop-shadow(0 4px 6px rgba(50, 50, 93, 0.11));
+}
+
+.main-link a {
     display: inline-block;
-    font-size: 24px;
-    padding: 15px 30px;
-    text-decoration: none;
+    background: linear-gradient(45deg, #89FFEE, #7090E1);  /* Gradient background added */
     color: white;
-    background-color: #0077b6; /* Calm blue background */
-    border-radius: 5px;
-    margin-bottom: 20px;
-    transition: background-color 0.3s;
+    padding: 10px 50px;
+    font-size: 28px;
+    border-radius: 50px;
+    text-decoration: none;
+    transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;  /* Transition for background added */
+    box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
 }
 
-.main-link:hover {
-    background-color: #005994; /* Darker blue on hover */
+.main-link a:hover {
+    background: linear-gradient(45deg, #6BE0DA, #5882D2);  /* Gradient background for hover added */
+    transform: translateY(-4px);
+    box-shadow: 0 7px 14px rgba(50, 50, 93, 0.1), 0 3px 6px rgba(0, 0, 0, 0.08);
 }
 
-.buttons {
+
+
+
+.additional-links {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    background: rgba(255, 255, 255, 0.8);
+    padding: 5px 10px;
+    border-radius: 8px;
+}
+
+.additional-links a {
+    display: inline-block;
+    margin: 0 10px;
+    padding: 5px 10px;
+    color: #2ECC71;
+    font-size: 18px;
+    text-decoration: none;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.additional-links a:hover {
+    color: #27AE60;
+    transform: translateY(-2px);
+}
+
+.section {
+    transition: background-color 0.5s ease;
+}
+
+.section:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+h2 {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 30px;
+    color: #3498DB;
+}
+
+p {
+    font-size: 20px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media screen and (max-width: 768px) {
+    .main-link a, .additional-links a {
+        font-size: 18px;
+        padding: 8px 20px;
+    }
+}
+
+
+/* Top Menu with a darker gradient */
+.top-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-image: linear-gradient(to right, #66D9D4, #6350A6);  /* This is a bit darker */
+    z-index: 1000; /* Ensure it's above other content */
+    padding: 10px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional shadow underneath */
+}
+
+.top-menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
     display: flex;
-    gap: 20px; /* Space between the buttons */
+    justify-content: space-around;
+    align-items: center;  /* To vertically center the links */
 }
 
-.btn {
+.top-menu ul li {
     display: inline-block;
-    padding: 10px 20px;
-    text-decoration: none;
-    border-radius: 5px;
+}
+
+.top-menu ul li a {
     color: white;
-    transition: background-color 0.3s;
+    text-decoration: none;
+    padding: 5px 15px;
+    display: block;
+    transition: background-color 0.3s;  /* For a smooth hover effect */
 }
 
-.btn:nth-child(1) {
-    background-color: #48a999; /* Green color for "About Us" button */
+.top-menu ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
 }
 
-.btn:nth-child(1):hover {
-    background-color: #2e826d; /* Darker green on hover */
-}
 
-.btn:nth-child(2) {
-    background-color: #0077b6; /* Blue color for "Contact Us" button */
-}
-
-.btn:nth-child(2):hover {
-    background-color: #005994; /* Darker blue on hover */
+.message-icon {
+    height: 20px; /* Or any desired size */
+    width: 20px;
+    vertical-align: middle;
+    margin-right: 10px; /* Spacing between the icon and the text */
 }

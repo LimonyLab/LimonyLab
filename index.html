@@ -1,18 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Front Page</title>
+    <title>Assistant Site</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+
 </head>
+
 <body>
+    <nav class="top-menu">
+        <ul>
+            <li><a href="#assistant-section">Limony Assistant</a></li>
+            <li><a href="#about-section">About Us</a></li>
+            <li><a href="#contact-section">Contact Us</a></li>
+        </ul>
+    </nav>
+
     <div class="container">
-        <a href="#" class="main-link">Go to assistant</a>
-        <div class="buttons">
-            <a href="#" class="btn">About Us</a>
-            <a href="#" class="btn">Contact Us</a>
-        </div>
+        <section class="full-height" id="assistant-section">
+            <img src="img/LimonyLab.png" alt="Your Logo" class="logo">
+            <div class="main-link">
+                <a href="#assistant-section"><i class="fas fa-comments"></i> Go to assistant</a>
+            </div>
+                   
+        </section>
+
+        <section id="about-section" class="full-height section">
+            <h2>About Us</h2>
+            <p>We're at the forefront of AI solutions, delivering unparalleled service for over a decade.</p>
+        </section>
+
+        <section id="contact-section" class="full-height section">
+            <h2>Contact Us</h2>
+            <p>123 Modern Street, Tech City, 12345</p>
+            <p>+123 456 7890</p>
+        </section>
+
     </div>
 </body>
+
 </html>
