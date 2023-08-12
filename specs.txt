@@ -1,0 +1,10 @@
+I want a single-page website with the following specifications:
+1. The website should follow a responsive design.
+2. We have a top menu stretching the whole width of the screen, but its links will only appear in the central part of the screen in the width of the menu for bigger screens.
+3. We will have these main sections: 
+    3.1 Top-most section below the top menu is what the users see when they open the website. It contains our logo which nothing but the name of our company: "LimonyLab"; This logo should contain our motto below it (with very small distance from the logo): "Your companion on the path to well-being and harmony". A short introduction of the company should be below this section then.
+    3.2 When the users scroll down a bit, they see a short description of one of our services called "LimonyLab Assistant" and the button which will lead the users to the actual application URL.
+    3.3 Contact the team section that will contain a list of team members (only two members) in cards besides each other. The cards will contain names and picture, position, and short description of the team member with their contact information. 
+4. Colors used in the theme used: #164556 and #a1cf8b. Especially, #164556 should be used where we present the logo as the background. 
+5. Logo structure: As the logo is just the name of our company, the font-color should likely be just white. Furthermore, use font-awesome with the following font and put it exactly on top of the "i" in LimonyLab (in the logo) in a way it covers the dot of i. The font for both the logo and its motto is Roboto. Obviosly the main logo font-size should be big enough for all of these to be possible
+<i class="fa-solid fa-leaf" style="color: #a1cf8b;"></i>

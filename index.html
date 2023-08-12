@@ -1,45 +1,152 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Assistant Site</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <title>LimonyLab</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #164556;
+            color: white;
+        }
 
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            text-align: center;
+        }
+
+        .top-menu {
+            width: 100%;
+            background-color: #164556;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        .logo {
+            font-size: 48px;
+            color: white;
+            position: relative;
+        }
+
+        .logo i {
+            position: absolute;
+            top: -15px;
+            left: calc(42.5% - 0px);
+            color: #a1cf8b;
+            font-size: 32px;
+        }
+
+        .motto {
+            color: white;
+            font-size: 18px;
+            margin-top: 10px;
+        }
+
+        .intro {
+            padding: 40px 20px;
+        }
+
+        .service-description {
+            padding: 40px 0;
+            background-color: rgba(255, 255, 255, 0.1);
+            margin: 40px 0;
+        }
+
+        .btn {
+            padding: 10px 20px;
+            border: none;
+            background-color: #a1cf8b;
+            color: #164556;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .btn:hover {
+            background-color: #8bbd77;
+        }
+
+        .contact-section {
+            display: flex;
+            justify-content: space-between;
+            padding: 40px 20px;
+        }
+
+        .team-card {
+            background-color: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            flex: 1;
+            margin: 0 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s;
+        }
+
+        .team-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .team-card img {
+            margin: 10px 0;
+        }
+
+        @media (max-width: 768px) {
+            .team-card {
+                flex: 0 0 100%;
+                margin: 10px 0;
+            }
+        }
+        
+        #beater {
+            
+        }
+    </style>
 </head>
-
 <body>
-    <nav class="top-menu">
-        <ul>
-            <li><a href="#assistant-section">Limony Assistant</a></li>
-            <li><a href="#about-section">About Us</a></li>
-            <li><a href="#contact-section">Contact Us</a></li>
-        </ul>
-    </nav>
-
-    <div class="container">
-        <section class="full-height" id="assistant-section">
-            <img src="img/LimonyLab.png" alt="Your Logo" class="logo">
-            <div class="main-link">
-                <a href="#assistant-section"><i class="fas fa-comments"></i> Go to assistant</a>
+    <div class="top-menu">
+        <div class="container">
+            <div class="logo">
+                Lımony<i class="fa-solid fa-leaf" id="beater"></i>Lab
             </div>
-                   
-        </section>
+            <div class="motto">Your companion on the path to well-being and harmony</div>
+        </div>
+    </div>
 
-        <section id="about-section" class="full-height section">
-            <h2>About Us</h2>
-            <p>We're at the forefront of AI solutions, delivering unparalleled service for over a decade.</p>
-        </section>
+    <!-- <div class="intro container">
+        <p>Short introduction about the company...</p>
+    </div> -->
 
-        <section id="contact-section" class="full-height section">
-            <h2>Contact Us</h2>
-            <p>123 Modern Street, Tech City, 12345</p>
-            <p>+123 456 7890</p>
-        </section>
+    <div class="service-description">
+        <div class="container">
+            <h2>LimonyLab Assistant</h2>
+            <p>Description of LimonyLab Assistant...</p>
+            <button class="btn">Go to Application</button>
+        </div>
+    </div>
 
+    <div class="contact-section container">
+        <div class="team-card">
+            <img src="img/lidija.jpg" alt="Lidija Krakic">
+            <h3>Lidija Krakic</h3>
+            <p>Co-Founder</p>
+            <p>Lidija holds a bachelor's degree in Sport Science, as well as Business Economics and Project Planning. Lidija manages business development and maintains close relationships with customers, investors and partners.            </p>
+            <p>070-786 99 39</p>
+            <p>lidijakrakic@gmail.com</p>
+        </div>
+        <div class="team-card">
+            <img src="img/mojtaba.jpg" alt="Mojtaba Eshghie">
+            <h3>Mojtaba Eshghie</h3>
+            <p>Co-Founder</p>
+            <p>Mojtaba is a PhD candidate at Theoretical Computer Science division of KTH Royal Institute of Technology. Mojtaba leads the technical aspect of product development. Programming to bring our vision to life as well as developing our AI and machine learning systems.            </p>
+            <p>073-946 61 21</p>
+            <p>eshghie@kth.se</p>
+        </div>
     </div>
 </body>
-
 </html>
